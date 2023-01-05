@@ -8,11 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * @description:
- * @author: johnvon.feng@ximalaya.com
- * @date: 2022-05-20 10:44
- **/
 @Slf4j
 @RestController
 @RequestMapping("/trade")

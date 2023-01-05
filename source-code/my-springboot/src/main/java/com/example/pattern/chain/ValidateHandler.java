@@ -1,14 +1,7 @@
 package com.example.pattern.chain;
 
-import cn.hutool.core.collection.CollUtil;
-import cn.hutool.core.util.ObjectUtil;
-import com.ximalaya.xmkp.trade.channel.service.ChannelRequestIdGenerateService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
-
-import static com.google.common.base.Preconditions.checkArgument;
 
 /**
  * @author gavin.wang
@@ -17,21 +10,18 @@ import static com.google.common.base.Preconditions.checkArgument;
  */
 @Component
 @Slf4j
-public class ValidateHandler extends TradeHandler{
-
-    @Resource
-    private ChannelRequestIdGenerateService channelRequestIdGenerateService;
+public class ValidateHandler extends TradeHandler {
 
     @Override
     public void doHandler(TradeHandlerContext context) {
-        String reqId = channelRequestIdGenerateService.generateChannelRequestId();
+        String reqId = "channelRequestIdGenerateService.generateChannelRequestId();";
         context.setReqId(reqId);
         checkParams(context);
         next.doHandler(context);
     }
 
-    private void checkParams(TradeHandlerContext context){
-        checkArgument(ObjectUtil.isNotNull(context.getReqId()), "请求ID不能为空");
+    private void checkParams(TradeHandlerContext context) {
+       /* checkArgument(ObjectUtil.isNotNull(context.getReqId()), "请求ID不能为空");
         checkArgument(ObjectUtil.isNotNull(context.getParam().getChannel()), "下单渠道不能为空");
         checkArgument(ObjectUtil.isNotNull(context.getParam().getTradeType()), "交易类型不能为空");
         checkArgument(ObjectUtil.isNotNull(context.getParam().getUserId()), "用户ID不能为空");
@@ -44,6 +34,6 @@ public class ValidateHandler extends TradeHandler{
         });
         if (context.getParam().getItemInfos().size() > 1) {
             throw new IllegalArgumentException("暂时只支持单商品下单");
-        }
+        }*/
     }
 }

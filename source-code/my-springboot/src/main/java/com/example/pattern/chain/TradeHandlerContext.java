@@ -7,11 +7,6 @@ import lombok.NoArgsConstructor;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * @author gavin.wang
- * @date 2021/12/23 11:42
- * @description context
- */
 @Data
 @Builder
 @NoArgsConstructor
