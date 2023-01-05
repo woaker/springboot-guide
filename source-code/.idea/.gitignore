@@ -8,3 +8,16 @@
 /httpRequests/
 # Zeppelin ignored files
 /ZeppelinRemoteNotebooks/
+/compiler.xml
+
+encodings.xml
+gradle.xml
+jarRepositories.xml
+jpa-buddy.xml
+misc.xml
+modules.xml
+runConfigurations.xml
+source-code.iml
+vcs.xml
+
+/inspectionProfiles/Project_Default.xml
